@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
    * @returns {Promise<void>} - A promise that resolves when the character details are displayed.
    */
   async function showCharacterDetails(characterId) {
-    console.log("Fetching character details for character ID:", characterId);
     try {
       const response = await fetch(
         `https://rickandmortyapi.com/api/character/${characterId}`
