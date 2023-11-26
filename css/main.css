@@ -1,18 +1,27 @@
+/**
+ * 
+ * This CSS file contains styles for the main layout and components of the website.
+ */
+
+/* Styles for the body element */
 body {
     font-family: "Arial", sans-serif;
     margin: 20px;
 }
 
+/* Styles for the header element */
 header {
     text-align: center;
     margin-bottom: 20px;
 }
 
+/* Styles for the main element */
 main {
     max-width: 90%;
     margin: 0 auto;
 }
 
+/* Styles for the container element */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -21,29 +30,34 @@ main {
     width: 100%;
 }
 
+/* Styles for the column element */
 .column {
     width: 100%;
     margin-bottom: 20px;
 }
 
+/* Media query for larger screens */
 @media (min-width: 768px) {
     .column {
         width: 48%;
     }
 }
 
+/* Styles for the caption element */
 caption {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Styles for the table element */
 table {
     width: 50%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
+/* Styles for the th element */
 th {
     background-color: #f2f2f2;
     border: 1px solid #ddd;
@@ -51,19 +65,20 @@ th {
     text-align: center;
 }
 
+/* Styles for the td element */
 td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 
+/* Styles for the tr element when hovered */
 tr:hover {
     background-color: violet;
     cursor: pointer;
 }
 
-/* Styles for character details */
-
+/* Styles for the character details section */
 #character-details img {
     max-width: 100%;
     height: auto;

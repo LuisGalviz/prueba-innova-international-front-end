@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   charactersList.addEventListener("click", handleCharacterClick);
 
+/**
+ * Fetches characters from the Rick and Morty API and populates the characters list.
+ * @returns {Promise<void>} A promise that resolves when the characters are fetched and displayed.
+ */
   async function fetchCharacters() {
     try {
       const response = await fetch(
@@ -24,6 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+/**
+ * Creates a table row element for a character.
+ * @param {Object} character - The character object.
+ * @returns {HTMLTableRowElement} - The created table row element.
+ */
   function createCharacterRow(character) {
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -33,6 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
     return row;
   }
 
+/**
+ * Fetches and displays the details of a character using the Rick and Morty API.
+ * @param {number} characterId - The ID of the character to fetch details for.
+ * @returns {Promise<void>} - A promise that resolves when the character details are displayed.
+ */
   async function showCharacterDetails(characterId) {
     try {
       const response = await fetch(
@@ -57,18 +71,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+/**
+ * Toggles the details of a character in a row.
+ * @param {HTMLElement} row - The row element containing the character details.
+ * @param {Object} character - The character object.
+ */
   function toggleCharacterDetails(row, character) {
     const isOpen = row.classList.toggle("open");
 
     if (isOpen) {
-      // Si el acordeón está abierto, mostrar detalles
       showCharacterDetails(character.id);
     } else {
-      // Si el acordeón está cerrado, borrar detalles
       characterDetails.innerHTML = "";
     }
 
-    // Cerrar otros acordeones abiertos
     const openRows = document.querySelectorAll(".open");
     openRows.forEach((openRow) => {
       if (openRow !== row) {
