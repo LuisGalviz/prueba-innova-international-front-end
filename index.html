@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rick and Morty Characters</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Rick and Morty Characters</h1>
+        </header>
+        <main>
+            <div class="container">
+                <table id="characters-table" class="column">
+                    <caption>List of Rick and Morty Characters</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="characters-list"></tbody>
+                </table>
+                <div id="character-details" class="column" aria-live="polite"></div>
+            </div>
+        </main>
+        <script src="js/main.js" defer></script>
+    </body>
+</html>
